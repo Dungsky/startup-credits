@@ -1,0 +1,81 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5med62ny26ym9zaxrzm45qt
+  slug: dockhive
+  slug_aliases: []
+  name: DockHive
+  domains:
+    - value: dockhive.io
+      role: primary
+      valid_from: 2026-01-01T00:00:00.000Z
+  category: hosting-infra
+profile:
+  summary: DockHive provides an agentic decentralized cloud platform where AI agents deploy and run apps, databases, and compute on independent nodes.
+  description: DockHive provides a decentralized cloud platform and compute network for hosting applications, managed databases, dev environments, and workflows.
+  links:
+    site: https://www.dockhive.io/
+sources:
+  - source_id: src_339d0b5aa956fd88eec850a1316f459866c71639820a2c650caa57cbb7f7e174
+    url: https://www.dockhive.io/startups
+  - source_id: src_f40039c420cad9ce660cd5a68e48691378b48d28886350e52c59d7bbf47586d3
+    url: https://www.dockhive.io/
+programs: []
+offers:
+  - offer_id: off_01m5med62qr068wd56bc2c1wpv
+    offer_slug: 5000-usd-in-cloud-credits-for-startups
+    offer_slug_aliases: []
+    title: $5,000 in cloud credits for startups
+    summary: Early-stage startups from idea to Series A get $5,000 in DockHive cloud credits valid for 12 months with no credit card required.
+    lifecycle:
+      status: active
+      effective_from: 2026-01-01T00:00:00.000Z
+    economics:
+      benefits:
+        - benefit_id: ben_01
+          description: $5,000 in DockHive cloud credit valid for 12 months across apps, databases, HivePods, n8n, and tunnels
+          duration:
+            kind: exact
+            value: P1Y
+          kind: credit
+          value:
+            amount:
+              currency: USD
+              minor_units: 500000
+            kind: exact
+      consideration:
+        kind: none
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - criterion_id: cri_01
+            kind: manual
+            reason: external-verification
+            statement: You're building your own product, from idea to Series A.
+          - criterion_id: cri_02
+            kind: manual
+            reason: external-verification
+            statement: Bootstrapped or funded, anywhere in the world.
+          - criterion_id: cri_03
+            kind: manual
+            reason: external-verification
+            statement: You have a website, landing page or demo we can look at.
+          - criterion_id: cri_04
+            kind: manual
+            reason: external-verification
+            statement: Agencies and freelancers building for clients are not eligible.
+          - criterion_id: cri_05
+            kind: manual
+            reason: external-verification
+            statement: Accounts that already received DockHive startup credit are not eligible.
+    roles:
+      terms_authority_entity_id: ent_01m5med62ny26ym9zaxrzm45qt
+      access_operator_entity_id: ent_01m5med62ny26ym9zaxrzm45qt
+    access:
+      availability: public
+      instructions: Apply using your DockHive account email on the startups page.
+      method: form
+      url: https://www.dockhive.io/startups
+    source_ids:
+      - src_339d0b5aa956fd88eec850a1316f459866c71639820a2c650caa57cbb7f7e174
+      - src_f40039c420cad9ce660cd5a68e48691378b48d28886350e52c59d7bbf47586d3

@@ -1,0 +1,60 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5mhdm282kxe50qy7jf6xthv
+  slug: hanzo
+  slug_aliases: []
+  name: Hanzo
+  domains:
+    - value: hanzo.ai
+      role: primary
+      valid_from: 2026-01-01T00:00:00.000Z
+  category: ai-ml
+profile:
+  summary: Hanzo provides frontier AI foundation models, autonomous coding agents, inference APIs, and cloud compute infrastructure.
+  description: Better, cheaper, faster. Pick all three. Frontier AI up to 200× faster, 400× cheaper. Build with autonomous coding agents, foundation models, and open cloud infrastructure.
+  links:
+    site: https://hanzo.ai/
+sources:
+  - source_id: src_0de0954e82b0e04fac6a87e3b7935b724ab1739e04343169812f1b64fd859ad2
+    url: https://hanzo.ai/startups
+  - source_id: src_d09e29b9064f1dbef6a28264e1b5283e08dc7b5690a4e26971e6a293708d41ec
+    url: https://hanzo.ai/
+programs: []
+offers:
+  - offer_id: off_01m5mhdm2bsv56an4nxybhm62c
+    offer_slug: up-to-150000-in-credits-for-venture-backed-startups
+    offer_slug_aliases: []
+    title: Up to $150,000 in credits for venture-backed startups
+    summary: Venture-backed startups with tier-1 VC backing get up to $150,000 in credits across Hanzo AI foundation models, inference, and cloud infrastructure.
+    lifecycle:
+      status: active
+      effective_from: 2026-01-01T00:00:00.000Z
+    economics:
+      benefits:
+        - benefit_id: ben_01
+          description: Up to $150,000 in platform credits for venture-backed teams
+          kind: credit
+          value:
+            amount:
+              currency: USD
+              minor_units: 15000000
+            kind: up-to
+      consideration:
+        kind: none
+    eligibility:
+      rule:
+        criterion_id: cri_01
+        kind: manual
+        reason: external-verification
+        statement: For venture-backed startups. Tier-1 VC backing is required for the credits program.
+    roles:
+      terms_authority_entity_id: ent_01m5mhdm282kxe50qy7jf6xthv
+      access_operator_entity_id: ent_01m5mhdm282kxe50qy7jf6xthv
+    access:
+      availability: public
+      instructions: Apply via the startup application form on the Hanzo website.
+      method: form
+      url: https://hanzo.ai/startups
+    source_ids:
+      - src_0de0954e82b0e04fac6a87e3b7935b724ab1739e04343169812f1b64fd859ad2
+      - src_d09e29b9064f1dbef6a28264e1b5283e08dc7b5690a4e26971e6a293708d41ec

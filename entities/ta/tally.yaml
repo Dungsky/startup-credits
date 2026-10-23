@@ -1,0 +1,75 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5mpdd1xp79qq9abxkk49wn3
+  slug: tally
+  slug_aliases: []
+  name: Tally
+  domains:
+    - value: tally.so
+      role: primary
+      valid_from: 2026-01-01T00:00:00.000Z
+  category: no-code
+profile:
+  summary: Tally is an online form builder for creating surveys, collecting responses, and accepting payments without coding.
+  description: The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed.
+  links:
+    site: https://tally.so/
+sources:
+  - source_id: src_169d3f0f7ee9fabd1e558475e162a70bff8d956f7922bec426557ffda32f0f0e
+    url: https://tally.so/help/tally-for-startups
+  - source_id: src_dda354e774105135abca05cb44f2ff662d009f8958e79e9e88f1983e838ec57a
+    url: https://tally.so/
+  - source_id: src_affb385ae2a6415e514df457c112bdb128b982d7a74e73acd490df166d2093ed
+    url: https://tally.so/r/kwoOVw
+programs: []
+offers:
+  - offer_id: off_01m5mpdd1xmt1gfs7hsa487jmy
+    offer_slug: tally-pro-startup-discount
+    offer_slug_aliases: []
+    title: Tally Pro startup discount
+    summary: Startups that are members of partner programs receive a discount on Tally Pro.
+    description: VC firms, communities, co-working spaces, incubators, accelerators, investors, and other startup support organizations can provide a Tally Pro discount directly to their members.
+    lifecycle:
+      status: active
+      effective_from: 2026-01-01T00:00:00.000Z
+    economics:
+      benefits:
+        - benefit_id: ben_01
+          description: Tally Pro discount for eligible startup members
+          kind: other
+      consideration:
+        kind: variable
+        description: The startup pays the discounted price for Tally Pro.
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - criterion_id: cri_member_of_partner
+            kind: manual
+            reason: external-verification
+            statement: You're a startup and a member of one of our partners
+          - criterion_id: cri_partner_code
+            kind: manual
+            reason: external-verification
+            statement: You've received a partner code
+          - criterion_id: cri_free_account
+            kind: manual
+            reason: external-verification
+            statement: You've created a free Tally account
+          - criterion_id: cri_never_paid_customer
+            kind: manual
+            reason: external-verification
+            statement: You've never been a Tally paid customer
+    roles:
+      terms_authority_entity_id: ent_01m5mpdd1xp79qq9abxkk49wn3
+      access_operator_entity_id: ent_01m5mpdd1xp79qq9abxkk49wn3
+    access:
+      availability: membership
+      instructions: Apply for a discount using the startup application form with your partner code.
+      method: form
+      url: https://tally.so/r/kwoOVw
+    terms_url: https://tally.so/help/tally-for-startups
+    source_ids:
+      - src_169d3f0f7ee9fabd1e558475e162a70bff8d956f7922bec426557ffda32f0f0e
+      - src_dda354e774105135abca05cb44f2ff662d009f8958e79e9e88f1983e838ec57a
+      - src_affb385ae2a6415e514df457c112bdb128b982d7a74e73acd490df166d2093ed

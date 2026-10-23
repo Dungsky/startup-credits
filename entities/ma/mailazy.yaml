@@ -1,0 +1,88 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5mepcp98hdb1f7w59q7hrex
+  slug: mailazy
+  slug_aliases: []
+  name: Mailazy
+  domains:
+    - value: mailazy.com
+      role: primary
+      valid_from: 2026-01-01T00:00:00.000Z
+  category: communication
+profile:
+  summary: Mailazy provides a transactional and marketing email platform with behavior triggers, AI drafts, visual automations, and own-SMTP routing.
+  description: Send emails when users do, or stop doing, something in your product. Write rules in plain English, or run Mailazy from Claude or ChatGPT over MCP.
+  links:
+    site: https://mailazy.com/
+sources:
+  - source_id: src_b58b638d8369dc594332cafce49d300bed52a2d668a41a80ad204dc4b1a518a0
+    url: https://mailazy.com/startup-program/
+  - source_id: src_8242b11dfc4ecbbf93ce10157942254a1c0b37b8d473baac20bb8339b508f8cb
+    url: https://mailazy.com/
+programs: []
+offers:
+  - offer_id: off_01m5mepcpcffmqm0ee0qjm4997
+    offer_slug: 65-percent-off-yearly-pro-plan-for-startups
+    offer_slug_aliases: []
+    title: 65% off yearly Pro plan for startups
+    summary: Eligible startups incorporated under 12 months with under $3M raised and fewer than 25 people get 65% off their first year of Mailazy Pro.
+    lifecycle:
+      status: active
+      effective_from: 2026-01-01T00:00:00.000Z
+    economics:
+      benefits:
+        - benefit_id: ben_01
+          description: 65% off the first year of Mailazy Pro ($172 instead of $490 yearly list price)
+          duration:
+            kind: exact
+            value: P1Y
+          kind: discount
+          percentage:
+            basis_points: 6500
+            kind: exact
+      consideration:
+        kind: variable
+        description: The startup pays the discounted price of $172 for the first year of Mailazy Pro.
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - criterion_id: cri_age
+            fact: company.age_months
+            kind: predicate
+            operator: lt
+            statement: The company was incorporated less than 12 months ago.
+            value:
+              type: number
+              value: 12
+          - criterion_id: cri_funding
+            fact: company.funding_raised_usd
+            kind: predicate
+            operator: lt
+            statement: Under $3M raised in total across all rounds.
+            value:
+              type: number
+              value: 3000000
+          - criterion_id: cri_team_size
+            kind: manual
+            reason: external-verification
+            statement: Fewer than 25 people (full-time equivalents, founders included).
+          - criterion_id: cri_customer
+            fact: company.is_current_customer
+            kind: predicate
+            operator: eq
+            statement: New to paid Mailazy.
+            value:
+              type: boolean
+              value: false
+    roles:
+      terms_authority_entity_id: ent_01m5mepcp98hdb1f7w59q7hrex
+      access_operator_entity_id: ent_01m5mepcp98hdb1f7w59q7hrex
+    access:
+      availability: public
+      instructions: Apply via the startup program form on the Mailazy website.
+      method: form
+      url: https://mailazy.com/startup-program/
+    source_ids:
+      - src_b58b638d8369dc594332cafce49d300bed52a2d668a41a80ad204dc4b1a518a0
+      - src_8242b11dfc4ecbbf93ce10157942254a1c0b37b8d473baac20bb8339b508f8cb

@@ -1,0 +1,81 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5mc768t4vb5epxw94y5cbxd
+  slug: servicem8
+  slug_aliases: []
+  name: ServiceM8
+  domains:
+    - value: servicem8.com
+      role: primary
+      valid_from: 2026-10-23T12:36:51.849Z
+  category: productivity
+profile:
+  summary: ServiceM8 is job management software for trade contractors and home service businesses, covering scheduling, quoting and invoicing, payments, and mobile apps.
+  description: ServiceM8 is job tracking and CRM software for trade contractors and home service businesses.
+  links:
+    site: https://www.servicem8.com
+sources:
+  - source_id: src_57142ae8781d68ae520f699244cb03ad20f9a105336bff2b6504027df8b6ae1f
+    url: https://www.servicem8.com
+  - source_id: src_32acc17e331fb7466b73c4d5aacf2ab046a1a44c158cfbb1278b5ad700a1a521
+    url: https://www.servicem8.com/new-business-special
+programs:
+  - program_id: prg_01m5mc768zh6zscw1frjs5018k
+    program_slug: servicem8-new-business-special
+    program_slug_aliases: []
+    title: ServiceM8 New Business Special
+    summary: ServiceM8's New Business special gives businesses registered less than 2 years ago 50% off their first 12 months of a ServiceM8 subscription.
+    source_ids:
+      - src_32acc17e331fb7466b73c4d5aacf2ab046a1a44c158cfbb1278b5ad700a1a521
+offers:
+  - offer_id: off_01m5mc768zad2fj410vxexcr7j
+    program_id: prg_01m5mc768zh6zscw1frjs5018k
+    offer_slug: servicem8-new-business-50-percent-off
+    offer_slug_aliases: []
+    title: 50% off ServiceM8 for 12 months for new businesses
+    summary: New ServiceM8 subscribers whose business was registered less than 2 years ago get 50% off any plan for their first 12 months after emailing proof of registration to ServiceM8 Support.
+    lifecycle:
+      status: active
+      effective_from: 2026-10-23T12:36:51.849Z
+    economics:
+      benefits:
+        - applies_to: ServiceM8 subscription plans
+          benefit_id: ben_01
+          description: 50% off the first 12 months of any ServiceM8 plan, applied as a discount to the account subscription.
+          duration:
+            kind: exact
+            value: P12M
+          kind: discount
+          percentage:
+            basis_points: 5000
+            kind: exact
+      consideration:
+        description: The business pays the remaining 50% of its ServiceM8 plan price.
+        kind: variable
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - criterion_id: cri_01
+            kind: manual
+            reason: external-verification
+            statement: The business was registered less than 2 years before submitting its claim, shown by an official registration record with the business name and registration date.
+          - criterion_id: cri_02
+            kind: manual
+            reason: external-verification
+            statement: The account is a new ServiceM8 subscription that subscribes through the Online Dashboard.
+          - criterion_id: cri_03
+            kind: manual
+            reason: external-verification
+            statement: Proof is sent to ServiceM8 Support before or within 14 days of subscribing, and only one claim is allowed per business.
+    roles:
+      terms_authority_entity_id: ent_01m5mc768t4vb5epxw94y5cbxd
+      access_operator_entity_id: ent_01m5mc768t4vb5epxw94y5cbxd
+    access:
+      availability: public
+      method: contact
+      url: https://www.servicem8.com/new-business-special
+      instructions: Create or sign in to a ServiceM8 account, then email ServiceM8 Support with the subject line 'New Business Special' and official proof that the business is less than 2 years old; ServiceM8 Support confirms by email and applies the special.
+    terms_url: https://www.servicem8.com/new-business-special
+    source_ids:
+      - src_32acc17e331fb7466b73c4d5aacf2ab046a1a44c158cfbb1278b5ad700a1a521

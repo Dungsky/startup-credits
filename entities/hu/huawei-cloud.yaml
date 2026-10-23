@@ -1,0 +1,70 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5hdbxe7d5d4xpagt6hdz6nk
+  slug: huawei-cloud
+  slug_aliases: []
+  name: Huawei Cloud
+  domains:
+    - value: huaweicloud.com
+      role: primary
+      valid_from: 2026-10-22T08:59:14.182Z
+  category: hosting-infra
+profile:
+  summary: Huawei Cloud provides cloud computing, storage, networking, databases and security products.
+  description: Huawei Cloud provides cloud products including compute, storage, networking, databases and security.
+  links:
+    site: https://www.huaweicloud.com/intl/en-us/
+sources:
+  - source_id: src_7d8edac95ceb7d69102d9f6c598b6908db31ce5374cce8d80c6e91da614ee769
+    url: https://www.huaweicloud.com/intl/en-us/
+  - source_id: src_3ef2d1582a51a254023a361470247597256cb43d44c4183a2bc7857e21690e45
+    url: https://startup.huaweicloud.com/intl/en-us/
+programs:
+  - program_id: prg_01m5hdbxe852w7z6p0wv7j4bqg
+    program_slug: huawei-cloud-startup-program
+    program_slug_aliases: []
+    title: Huawei Cloud Startup Program
+    summary: The Huawei Cloud Startup Program supports eligible startups with cloud cash-credit vouchers and cloud-migration resources.
+    source_ids:
+      - src_3ef2d1582a51a254023a361470247597256cb43d44c4183a2bc7857e21690e45
+offers:
+  - offer_id: off_01m5hdbxe8wzt1cw7bsxe58vyd
+    program_id: prg_01m5hdbxe852w7z6p0wv7j4bqg
+    offer_slug: huawei-cloud-startup-cash-credits
+    offer_slug_aliases: []
+    title: Huawei Cloud Startup cash credits
+    summary: After approval and joining, eligible startups receive a minimum 5,000 Huawei Cloud cash-credit voucher and may apply for up to USD 150,000.
+    lifecycle:
+      status: active
+      effective_from: 2026-10-22T08:59:14.182Z
+    economics:
+      consideration:
+        kind: unknown
+        description: The official page describes approval and joining conditions but does not publish a separate customer consideration.
+      benefits:
+        - benefit_id: ben_primary
+          description: Minimum 5,000 Huawei Cloud cash credits voucher (currency not stated); possibility to apply for up to USD 150,000
+          kind: credit
+          value:
+            kind: up-to
+            amount:
+              currency: USD
+              minor_units: 15000000
+    eligibility:
+      rule:
+        kind: all
+        rules:
+          - kind: manual
+            criterion_id: cri_requirement_01
+            statement: The enterprise must be established less than 5 years ago, must not be listed, and no more than 50% of its shares may be held by a listed company.
+            reason: not-machine-evaluable
+    roles:
+      terms_authority_entity_id: ent_01m5hdbxe7d5d4xpagt6hdz6nk
+      access_operator_entity_id: ent_01m5hdbxe7d5d4xpagt6hdz6nk
+    access:
+      availability: public
+      method: form
+      url: https://startup.huaweicloud.com/intl/en-us/
+      instructions: Follow the page's membership application process, submit materials for qualification review, register a Huawei Cloud account and complete enterprise real-name verification.
+    source_ids:
+      - src_3ef2d1582a51a254023a361470247597256cb43d44c4183a2bc7857e21690e45

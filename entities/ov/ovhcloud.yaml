@@ -1,0 +1,21 @@
+schema_version: sourcey.entity-authoring/v1alpha1
+entity:
+  entity_id: ent_01m5kaxxm9qqx201wx3kgkeaf2
+  slug: ovhcloud
+  slug_aliases: []
+  name: OVHcloud
+  domains:
+    - value: ovhcloud.com
+      role: primary
+      valid_from: 2026-10-23T00:00:00.000Z
+  category: hosting-infra
+profile:
+  summary: OVHcloud delivers hosted private cloud, public cloud, and dedicated server solutions.
+  description: OVHcloud delivers hosted private cloud, public cloud, and dedicated server solutions.
+  links:
+    site: https://www.ovhcloud.com/en/
+sources:
+  - source_id: src_9876543210abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+    url: https://www.ovhcloud.com/en/
+programs: []
+offers: []

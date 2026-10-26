@@ -7,7 +7,7 @@ export const polarVendor: VendorProgram = {
   startupProgram: {
     name: 'Polar Startup Program',
     url: 'https://polar.sh/startup-program',
-    description: 'Scale plan free for 12 months (standard price $400/mo), with 3.40% + $0.30 transaction fees applying, prioritized ticket support and a dedicated Slack channel.',
+    description: 'Scale plan free for 12 months ($400/mo value), with 3.40% + $0.30 transaction fees applying, prioritized ticket support and a dedicated Slack channel.',
     eligibility: [
       'Early-stage startups',
       'New Polar customers'
